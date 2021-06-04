@@ -1,0 +1,6 @@
+module.exports = {
+    "up": "CREATE TABLE IF NOT EXISTS User(id INT NOT NULL AUTO_INCREMENT,googleId VARCHAR(150) NULL,facebookId VARCHAR(150) NULL,first_name VARCHAR(150) NOT NULL,last_name VARCHAR(150) NOT NULL,email VARCHAR(200) NOT NULL,password VARCHAR(300) NULL,\
+    phoneNumber VARCHAR(20) NULL,type VARCHAR(10) NOT NULL DEFAULT('r'),suspended INT NOT NULL DEFAULT(0),createdAt TIMESTAMP(6) DEFAULT (CURRENT_TIMESTAMP(6)),\
+    PRIMARY KEY(id));",
+    "down": "DROP TABLE User;"
+}
